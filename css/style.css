@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Mukta', sans-serif;
+    color: #414141;
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- NAV --- */
+nav {
+    position: fixed;
+    width: 100vw;
+    height: 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+nav > div{
+    width: 25%;
+    border-left: 1px solid #e1e1e1;
+}
+
+nav a {
+    color: #414141;
+    text-decoration: none;
+}
+
+/* --- NAV END--- */
+
+/* --- SIDE --- */
+.side-wrapper {
+    height: 100vh;
+    position: absolute;
+    padding: 4vw 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    z-index: 99;
+
+}
+.side-wrapper  p {
+    font-weight: 600;
+    font-size: 19px;
+    text-align: center;
+    line-height: 20px;
+}
+.icons-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.icons-wrapper a {
+    color: #414141;
+    font-size: 18px;
+}
+
+/* --- SIDE END--- */
+
+/* --- MAIN VIEW --- */
+.main-view {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.main-view h1 {
+    font-size: 90px;
+    line-height: 80px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.name {
+    display: flex;
+    flex-direction: row;
+    
+}
+.spacer-name {
+    width: 20px;
+}
+
+.main-view h2 {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 90px;
+}
+.menu-wrapper {
+    width: 40vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.arrow {
+    font-size: 30px;
+    position: absolute;
+    bottom: 30px;
+    transform: rotate(180deg);
+}
+/* --- MAIN VIEW END --- */
+
