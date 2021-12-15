@@ -134,6 +134,7 @@ nav div a:hover {
     position: absolute;
     bottom: 30px;
     transform: rotate(180deg);
+    cursor: pointer;
 }
 /* --- MAIN VIEW END --- */
 
