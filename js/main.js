@@ -1,3 +1,5 @@
+// NAME ANIMATION
+
 var tl = gsap.timeline({ paused: true});
 tl.to('#name',1, {y:-100});
 tl.to('#name',1, {x:400}, "frame-1");
@@ -12,7 +14,7 @@ tlReverse.to('#surname',1, {y:0});
 
 
 const firstAnim = document.querySelector("#name.first-anim");
-const myName = document.querySelector("#name");
+const myName = document.getElementById("#name");
 var flag = true;
 function anim() {
     
@@ -25,7 +27,13 @@ function anim() {
       }
 }
 
-
-
 const userName = document.querySelector('.name');
 userName.addEventListener('mouseenter', anim);
+
+// ARROW SCROLL TO ABOUT
+
+
+const arrow = document.querySelector(".arrow");
+arrow.addEventListener('click', () => {
+  gsap.to(window , .3 , {scrollTo: "#about-section"});
+})

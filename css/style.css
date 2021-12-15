@@ -53,7 +53,7 @@ nav div a:hover {
 /* --- SIDE --- */
 .side-wrapper {
     height: 100vh;
-    position: absolute;
+    position: fixed;
     padding: 55px 40px;
     display: flex;
     flex-direction: column;
@@ -116,6 +116,18 @@ nav div a:hover {
     margin-top: 5px;
     font-size: 18px;
     font-weight: 600;
+    box-sizing: border-box;
+}
+.menu-wrapper a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #414141;
+    line-height: 26px;
+
+}
+.menu-wrapper a:hover {
+   border-bottom: 1px solid #414141;
+
 }
 .arrow {
     font-size: 30px;
