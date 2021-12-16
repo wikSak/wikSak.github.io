@@ -37,3 +37,7 @@ const arrow = document.querySelector(".arrow");
 arrow.addEventListener('click', () => {
   gsap.to(window , .3 , {scrollTo: "#about-section"});
 })
+
+var tlArrow = gsap.timeline({repeat: -1});
+tlArrow.to('.arrow',.5, {y:10})
+.to('.arrow',.5, {y:0});
