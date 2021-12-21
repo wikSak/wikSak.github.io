@@ -197,7 +197,7 @@ nav div a:hover {
   background: #414141;
   transform: rotateY(180deg);
   backface-visibility: hidden;
-  box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.45);
+  /* box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.45); */
 
 }
 
@@ -232,9 +232,19 @@ nav div a:hover {
   position: absolute;
   top: 0;
   z-index: -2;
+  transition: 1s;
 }
 #details-four {
+  z-index: -4;
+}
+#details-five {
   z-index: -3;
+  transition: 1s;
+}
+#details-six {
+  z-index: -5;
+  transition: .5s;
+
 }
 
 /* --- ABOUT SECTION END --- */
