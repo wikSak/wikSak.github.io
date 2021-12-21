@@ -69,15 +69,19 @@ const detailsSix = document.getElementById('details-six');
 const imgBoxThree = document.getElementById('img-box-three');
 const bgCardThree = document.getElementById('bg-card-three');
 
-// function changeIndex() {
-  
-// }
+
 
 function noImgOne() {
   imgBox.style.display = "none";
 }
 function noImgTwo() {
   imgBoxTwo.style.display = "none";
+}
+function ImgOne() {
+  imgBox.style.display = "block";
+}
+function ImgTwo() {
+  imgBoxTwo.style.display = "block";
 }
 detailsTwo.addEventListener('click', () =>{
 
@@ -91,7 +95,7 @@ bgCardTwo.addEventListener('click', () =>{
   imgBoxTwo.classList.remove('img-box-rotate');
   imgBoxTwo.style.zIndex = "-1";
   detailsFive.style.opacity = "1";
-  imgBox.style.display = "block";
+  window.setTimeout(ImgOne, 50);
 })
 
 detailsThree.addEventListener('click', () =>{
@@ -101,16 +105,15 @@ detailsThree.addEventListener('click', () =>{
   detailsSix.style.opacity = "0";
   window.setTimeout(noImgTwo, 800);
 
-    // imgBoxTwo.style.zIndex = "-1";
 })
 bgCardThree.addEventListener('click', () =>{
   imgBoxThree.classList.remove('img-box-rotate');
   imgBoxThree.style.zIndex = "-2";
   imgBoxTwo.style.display = "block";
-  // imgBoxTwo.style.zIndex = "1";
   detailsSix.style.opacity = "1";
+  window.setTimeout(ImgTwo, 50);
 })
-
+// -- ABOUT SECTION DISABLE CLICKS -- 
 function unableClicks() {
   aboutSection.classList.remove('dis-click');
 }
