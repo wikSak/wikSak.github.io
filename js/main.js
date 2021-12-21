@@ -34,7 +34,15 @@ userName.addEventListener('mouseenter', anim);
 
 
 const arrow = document.querySelector(".arrow");
+const menuAbout = document.getElementById("menu-about");
+const mainAbout = document.getElementById("main-about");
 arrow.addEventListener('click', () => {
+  gsap.to(window , .3 , {scrollTo: "#about-section"});
+})
+menuAbout.addEventListener('click', () => {
+  gsap.to(window , .3 , {scrollTo: "#about-section"});
+})
+mainAbout.addEventListener('click', () => {
   gsap.to(window , .3 , {scrollTo: "#about-section"});
 })
 
