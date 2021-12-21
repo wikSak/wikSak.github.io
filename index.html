@@ -1,75 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wiktoria's Portfolio</title>
-    <script src="https://kit.fontawesome.com/5dc2bcdbcb.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <script
+      src="https://kit.fontawesome.com/5dc2bcdbcb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <nav>
-        <div class="header-wrapper center">
-            <a href="#">main</a>
-        </div>
-        <div class="header-wrapper center">
-            <a href="#">about</a>
-        </div>
-        <div class="header-wrapper center">
-            <a href="#">projects</a>
-        </div>
-        <div class="header-wrapper center">
-            <a href="#">contact</a>
-        </div>
+      <div class="header-wrapper center">
+        <a href="#">main</a>
+      </div>
+      <div class="header-wrapper center">
+        <a href="#">about</a>
+      </div>
+      <div class="header-wrapper center">
+        <a href="#">projects</a>
+      </div>
+      <div class="header-wrapper center">
+        <a href="#">contact</a>
+      </div>
     </nav>
     <main>
-        <div class="side-wrapper">
-            <p>W<br>S</p>
-            <div class="icons-wrapper">
-                <a target="_blank" href="https://github.com/wikSak"><i class="fas fa-code-branch"></i></a>
-                <a target="_blank" href="https://www.linkedin.com/in/wiktoria-sakowska/"> <i class="fab fa-linkedin-in"></i></a>
-                <a target="_blank" href="https://www.instagram.com/wik.sak/"> <i class="fab fa-instagram"></i></a>
-             
-               
-            </div>
+      <div class="side-wrapper">
+        <p>W<br />S</p>
+        <div class="icons-wrapper">
+          <a target="_blank" href="https://github.com/wikSak"
+            ><i class="fas fa-code-branch"></i
+          ></a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/wiktoria-sakowska/"
+          >
+            <i class="fab fa-linkedin-in"></i
+          ></a>
+          <a target="_blank" href="https://www.instagram.com/wik.sak/">
+            <i class="fab fa-instagram"></i
+          ></a>
         </div>
-       
-        <div class="main-view center">
-            <div class="name center">
-              
-                <h1 id="name" class="first-anim">Wiktoria</h1>
-                <div class="spacer-name"></div>
-            <h1 id="surname" class="first-anim">Sakowska</h1>
-            </div>
-            
-            <h2>Junior Frontend Developer & UX designer</h2>
-            <div class="menu-wrapper">
-                <a href="#">about</a>
-                <a href="#">projects</a>
-                <a href="#">contact</a>
-            </div>
-            <div class="arrow">
-                <i class="fas fa-chevron-up"></i>
-                
-            </div>
-    
-        </div>
-        <div class="about-wrapper" id="about-section">
-            <div class="card">
-                <div class="img-box">
-                    <img src="/assets/bw-image.png" alt="">
-                    <div class="bg-card"></div> 
-                </div>
-                <div class="details">hELLO</div>
-            </div>
+      </div>
 
+      <div class="main-view center">
+        <div class="name center">
+          <h1 id="name" class="first-anim">Wiktoria</h1>
+          <div class="spacer-name"></div>
+          <h1 id="surname" class="first-anim">Sakowska</h1>
         </div>
+
+        <h2>Junior Frontend Developer & UX designer</h2>
+        <div class="menu-wrapper">
+          <a href="#">about</a>
+          <a href="#">projects</a>
+          <a href="#">contact</a>
+        </div>
+        <div class="arrow">
+          <i class="fas fa-chevron-up"></i>
+        </div>
+      </div>
+      <div class="about-wrapper" id="about-section">
+        <div class="card" id="card">
+     
+            <div class="img-box" id="img-box-first">
+              <img src="/assets/bw-image.png" id="img-first" />
+              <div class="bg-card" id="bg-card-first"><p>about</p></div>
+            </div>
+           
+            <div class="img-box" id="img-box-sec">
+              <div class="details" id="details-two">hELL0</div>
+              <div class="bg-card" id="bg-card-two"><p>Skills</p></div>
+            </div>
+            <div class="img-box" id="img-box-three">
+              <div class="details" id="details-three">skills</div>
+              <div class="bg-card" id="bg-card-three"><p>experience</p></div>
+            </div>
+            <div class="details" id="details-four">exp</div>
+          
+        </div>
+      </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollToPlugin.min.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

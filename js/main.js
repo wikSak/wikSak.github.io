@@ -41,3 +41,57 @@ arrow.addEventListener('click', () => {
 var tlArrow = gsap.timeline({repeat: -1});
 tlArrow.to('.arrow',.5, {y:10})
 .to('.arrow',.5, {y:0});
+
+// --- FIRST PAGE ---
+
+const imgFirst = document.getElementById('img-first');
+const card = document.getElementById('card');
+const imgBox = document.getElementById('img-box-first');
+const bgCardFirst = document.getElementById('bg-card-first');
+
+imgFirst.addEventListener('click', () =>{
+  card.classList.add('card-move');
+  imgBox.classList.add('img-box-rotate');
+})
+bgCardFirst.addEventListener('click', () =>{
+  card.classList.remove('card-move');
+  imgBox.classList.remove('img-box-rotate');
+})
+
+
+// --- FIRST PAGE END ---
+const detailsTwo = document.getElementById('details-two');
+const imgBoxTwo = document.getElementById('img-box-sec');
+const bgCardTwo = document.getElementById('bg-card-two');
+const detailsThree = document.getElementById('details-three');
+const imgBoxThree = document.getElementById('img-box-three');
+const bgCardThree = document.getElementById('bg-card-three');
+
+// function changeIndex() {
+  
+// }
+
+
+detailsTwo.addEventListener('click', () =>{
+
+  imgBoxTwo.classList.add('img-box-rotate');
+  imgBoxTwo.style.zIndex = "1";
+
+})
+bgCardTwo.addEventListener('click', () =>{
+  imgBoxTwo.classList.remove('img-box-rotate');
+  imgBoxTwo.style.zIndex = "-1";
+ 
+})
+
+detailsThree.addEventListener('click', () =>{
+
+  imgBoxThree.classList.add('img-box-rotate');
+  imgBoxThree.style.zIndex = "1";
+    imgBoxTwo.style.zIndex = "-1";
+})
+bgCardThree.addEventListener('click', () =>{
+  imgBoxThree.classList.remove('img-box-rotate');
+  imgBoxThree.style.zIndex = "-2";
+  imgBoxTwo.style.zIndex = "1";
+})
