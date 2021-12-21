@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 body {
   font-family: "Mukta", sans-serif;
@@ -148,6 +149,11 @@ nav div a:hover {
   transform: perspective(1000px);
   transition: 1s;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 }
 /* .card:hover {
   transform: translateX(50%);
@@ -197,13 +203,14 @@ nav div a:hover {
   background: #414141;
   transform: rotateY(180deg);
   backface-visibility: hidden;
-  /* box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.45); */
+  display: flex;
+    backface-visibility: hidden;
+    justify-content: center;
+    align-items: center;
 
 }
 
-/* .card:hover .img-box {
-  transform: rotateY(-180deg);
-} */
+
 .img-box-rotate {
   transform: rotateY(-180deg);
 }
@@ -245,6 +252,10 @@ nav div a:hover {
   z-index: -5;
   transition: .5s;
 
+}
+
+.dis-click {
+  pointer-events: none;
 }
 
 /* --- ABOUT SECTION END --- */
