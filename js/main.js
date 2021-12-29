@@ -52,18 +52,30 @@ tlArrow.to('.arrow',.5, {y:10})
 
 // --- FIRST PAGE ---
 
+const aboutClick = document.getElementById('about-click');
 const imgFirst = document.getElementById('img-first');
 const card = document.getElementById('card');
 const imgBox = document.getElementById('img-box-first');
 const bgCardFirst = document.getElementById('bg-card-first');
+function aboutClickVisible() {
+  aboutClick.style.display = "block";
+}
 
 imgFirst.addEventListener('click', () =>{
   card.classList.add('card-move');
   imgBox.classList.add('img-box-rotate');
+  aboutClick.style.display = "none";
+})
+aboutClick.addEventListener('click', () =>{
+  card.classList.add('card-move');
+  imgBox.classList.add('img-box-rotate');
+  aboutClick.style.display = "none";
 })
 bgCardFirst.addEventListener('click', () =>{
   card.classList.remove('card-move');
   imgBox.classList.remove('img-box-rotate');
+  window.setTimeout(aboutClickVisible, 900);
+  
 })
 
 
@@ -130,3 +142,9 @@ aboutSection.addEventListener('click', () => {
   aboutSection.classList.add('dis-click');
   window.setTimeout(unableClicks, 1000);
 })
+
+// -- CLICK ANIMATION -- 
+
+var tlClick = gsap.timeline({repeat: -1});
+tlClick.to('#about-click', .15 , {opacity:0, delay: .7})
+.to('#about-click',.15, {opacity:1, delay: .7});
