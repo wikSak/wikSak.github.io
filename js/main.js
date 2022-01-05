@@ -1,3 +1,17 @@
+// --- HIDE MENU --
+var prevPos = window.pageYOffset;
+window.onscroll = function() {
+var currentPos = window.pageYOffset;
+  if (prevPos > currentPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevPos = currentPos;
+}
+// --- HIDE MENU END --
+
+
 // NAME ANIMATION
 
 var tl = gsap.timeline({ paused: true});
@@ -30,21 +44,15 @@ function anim() {
 const userName = document.querySelector('.name');
 userName.addEventListener('mouseenter', anim);
 
-// ARROW SCROLL TO ABOUT
+// ARROW SCROLL TO SELECTED SECTION
 
-
-const arrow = document.querySelector(".arrow");
-const menuAbout = document.getElementById("menu-about");
-const mainAbout = document.getElementById("main-about");
-arrow.addEventListener('click', () => {
+function scrollToAbout() {
   gsap.to(window , .3 , {scrollTo: "#about-section"});
-})
-menuAbout.addEventListener('click', () => {
-  gsap.to(window , .3 , {scrollTo: "#about-section"});
-})
-mainAbout.addEventListener('click', () => {
-  gsap.to(window , .3 , {scrollTo: "#about-section"});
-})
+}
+function scrollToProjects() {
+  gsap.to(window , .5 , {scrollTo: "#projects-wrapper"});
+}
+// --- ARROW SCROLL TO SELECTED SECTION END ---
 
 var tlArrow = gsap.timeline({repeat: -1});
 tlArrow.to('.arrow',.5, {y:10})
@@ -146,5 +154,45 @@ aboutSection.addEventListener('click', () => {
 // -- CLICK ANIMATION -- 
 
 var tlClick = gsap.timeline({repeat: -1});
-tlClick.to('#about-click', .15 , {opacity:0, delay: .7})
-.to('#about-click',.15, {opacity:1, delay: .7});
+tlClick.to('#about-click', .15 , {opacity:0, delay: .3})
+.to('#about-click',.15, {opacity:1, delay: .3});
+// -- CLICK ANIMATION END -- 
+
+// -- PROJECTS ANIMATIONS --
+gsap.set(".project-desc", {x: 30});
+gsap.set(".project-view", {x: -30});
+
+gsap.timeline({
+  scrollTrigger: {
+    trigger: "#project-1",
+    start: "center 80%",
+    end: "top bottom",
+    scrub: 2,
+    pin: true
+  }
+})
+  .from("#project-1 .project-desc",  { x: -20 }, "frame-1")
+  .from("#project-1 .project-view", { x: 20 }, "frame-1");
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: "#project-2",
+      start: "center 80%",
+      end: "top bottom",
+      scrub: 2,
+      pin: true
+    }
+  })
+  .from("#project-2 .project-desc",  { x: -20 }, "frame-1")
+  .from("#project-2 .project-view", { x: 20 }, "frame-1");
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: "#project-3",
+      start: "center 80%",
+      end: "top bottom",
+      scrub: 2,
+      pin: true
+    }
+  })
+  .from("#project-3 .project-desc",  { x: -20 }, "frame-1")
+  .from("#project-3 .project-view", { x: 20 }, "frame-1");
+// -- PROJECTS ANIMATIONS END --

@@ -17,15 +17,15 @@
     />
   </head>
   <body>
-    <nav>
+    <nav id="navbar">
       <div class="header-wrapper center">
         <a href="#">main</a>
       </div>
       <div class="header-wrapper center">
-        <a id="menu-about" href="#">about</a>
+        <a id="menu-about" onclick="scrollToAbout()">about</a>
       </div>
       <div class="header-wrapper center">
-        <a href="#">projects</a>
+        <a onclick="scrollToProjects()">projects</a>
       </div>
       <div class="header-wrapper center">
         <a href="#">contact</a>
@@ -59,11 +59,11 @@
 
         <h2>Junior Frontend Developer & UX Designer</h2>
         <div class="menu-wrapper">
-          <a id="main-about" href="#">about</a>
-          <a href="#">projects</a>
+          <a id="main-about" onclick="scrollToAbout()">about</a>
+          <a onclick="scrollToProjects()">projects</a>
           <a href="#">contact</a>
         </div>
-        <div class="arrow">
+        <div class="arrow" onclick="scrollToAbout()">
           <i class="fas fa-chevron-up"></i>
         </div>
       </div>
@@ -141,9 +141,29 @@
           <div class="details" id="details-six">skills</div>
         </div>
       </div>
+      <div id="projects-wrapper">
+        <div class="project" id="project-1">
+          <div class="project-desc">
+            <h1>Case Converter</h1>
+            <p>Simple tool to convert your text to the upper, lower, proper or sentence case.</p>
+            <a href="https://github.com/wikSak/case-converter.git" target="_blank">Show details</a>
+          </div>
+          <a class="project-view grayscale" href="https://github.com/wikSak/case-converter.git" target="_blank"></a>
+          <!-- <div class="project-view grayscale"></div> -->
+        </div>
+        <div class="project" id="project-2">
+          <div class="project-desc"></div>
+          <div class="project-view"></div>
+        </div>
+        <div class="project" id="project-3">
+          <div class="project-desc"></div>
+          <div class="project-view"></div>
+        </div>
+      </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
