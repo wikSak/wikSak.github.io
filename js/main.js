@@ -1,14 +1,14 @@
 // --- HIDE MENU --
-var prevPos = window.pageYOffset;
-window.onscroll = function() {
-var currentPos = window.pageYOffset;
-  if (prevPos > currentPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
-  }
-  prevPos = currentPos;
-}
+// var prevPos = window.pageYOffset;
+// window.onscroll = function() {
+// var currentPos = window.pageYOffset;
+//   if (prevPos > currentPos) {
+//     document.getElementById("navbar").style.top = "0";
+//   } else {
+//     document.getElementById("navbar").style.top = "-50px";
+//   }
+//   prevPos = currentPos;
+// }
 // --- HIDE MENU END --
 
 
@@ -51,6 +51,9 @@ function scrollToAbout() {
 }
 function scrollToProjects() {
   gsap.to(window , .5 , {scrollTo: "#projects-wrapper"});
+}
+function scrollToMain() {
+  gsap.to(window , .5 , {scrollTo: "#main-view"});
 }
 // --- ARROW SCROLL TO SELECTED SECTION END ---
 

@@ -17,23 +17,23 @@
     />
   </head>
   <body>
-    <nav id="navbar">
-      <div class="header-wrapper center">
-        <a href="#">main</a>
-      </div>
-      <div class="header-wrapper center">
-        <a id="menu-about" onclick="scrollToAbout()">about</a>
-      </div>
-      <div class="header-wrapper center">
-        <a onclick="scrollToProjects()">projects</a>
-      </div>
-      <div class="header-wrapper center">
-        <a href="#">contact</a>
-      </div>
-    </nav>
     <main>
       <div class="side-wrapper">
         <p>W<br />S</p>
+        <nav id="navbar">
+          <!-- <div class="header-wrapper center">
+            <a href="#">main</a>
+          </div> -->
+          <div class="header-wrapper center">
+            <a id="menu-about" onclick="scrollToAbout()">about</a>
+          </div>
+          <div class="header-wrapper center">
+            <a onclick="scrollToProjects()">projects</a>
+          </div>
+          <div class="header-wrapper center">
+            <a href="mailto:wika.sak@gmail.com">contact</a>
+          </div>
+        </nav>
         <div class="icons-wrapper">
           <a target="_blank" href="https://github.com/wikSak"
             ><i class="fas fa-code-branch"></i
@@ -49,8 +49,10 @@
           ></a>
         </div>
       </div>
-
-      <div class="main-view center">
+   <div class="arrow-main center" onclick="scrollToMain()">
+  <i class="fas fa-chevron-up"></i>
+</div>
+      <div class="main-view center" id="main-view">
         <div class="name center">
           <h1 id="name" class="first-anim">Wiktoria</h1>
           <div class="spacer-name"></div>
@@ -61,21 +63,20 @@
         <div class="menu-wrapper">
           <a id="main-about" onclick="scrollToAbout()">about</a>
           <a onclick="scrollToProjects()">projects</a>
-          <a href="#">contact</a>
+          <a href="mailto:wika.sak@gmail.com">contact</a>
         </div>
         <div class="arrow" onclick="scrollToAbout()">
           <i class="fas fa-chevron-up"></i>
         </div>
       </div>
       <div class="about-wrapper" id="about-section">
-        <div class="about-headline">
+        <div class="headline">
           <h1>ABOUT</h1>
         </div>
         <div class="card" id="card">
           <div class="img-box" id="img-box-first">
-            
             <img src="/assets/bw-image.png" id="img-first" />
-            <p id="about-click">  <i class="fas fa-chevron-up"></i></p>
+            <p id="about-click"><i class="fas fa-chevron-up"></i></p>
             <div class="bg-card" id="bg-card-first"><p>about</p></div>
           </div>
 
@@ -103,19 +104,19 @@
           <div class="img-box" id="img-box-three">
             <div class="details" id="details-three">
               <div class="skills-wrapper">
-             <h2>Intermediate:</h2>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Adobe Photoshop</li>
-                <li>Adobe Illustrator</li>
-              </ul>
-             <h2>Basic:</h2>
-              <ul>
-                <li>JavaScript</li>
-                <li>GSAP</li>
-              </ul>
-            </div>
+                <h2>Intermediate:</h2>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Adobe Photoshop</li>
+                  <li>Adobe Illustrator</li>
+                </ul>
+                <h2>Basic:</h2>
+                <ul>
+                  <li>JavaScript</li>
+                  <li>GSAP</li>
+                </ul>
+              </div>
               <div class="arrow-details">
                 <i class="fas fa-chevron-up"></i>
               </div>
@@ -138,20 +139,33 @@
               <h3>2017 - 2019</h3>
               <p>Content Manager</p>
             </div>
-     
           </div>
           <div class="details" id="details-five">hELLO</div>
           <div class="details" id="details-six">skills</div>
         </div>
       </div>
       <div id="projects-wrapper">
+        <div class="headline">
+          <h1>PROJECTS</h1>
+        </div>
         <div class="project" id="project-1">
           <div class="project-desc">
             <h1>Case Converter</h1>
-            <p>Simple tool to convert your text to the upper, lower, proper or sentence case.</p>
-            <a href="https://github.com/wikSak/case-converter.git" target="_blank">Show details</a>
+            <p>
+              Simple tool to convert your text to the upper, lower, proper or
+              sentence case.
+            </p>
+            <a
+              href="https://github.com/wikSak/case-converter.git"
+              target="_blank"
+              >Show details</a
+            >
           </div>
-          <a class="project-view grayscale" href="https://github.com/wikSak/case-converter.git" target="_blank"></a>
+          <a
+            class="project-view grayscale"
+            href="https://github.com/wikSak/case-converter.git"
+            target="_blank"
+          ></a>
           <!-- <div class="project-view grayscale"></div> -->
         </div>
         <div class="project" id="project-2">
@@ -163,7 +177,9 @@
           <div class="project-view"></div>
         </div>
       </div>
+      <div id="contact"></div>
     </main>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
