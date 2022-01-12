@@ -1,17 +1,15 @@
-// --- HIDE MENU --
-// var prevPos = window.pageYOffset;
-// window.onscroll = function() {
-// var currentPos = window.pageYOffset;
-//   if (prevPos > currentPos) {
-//     document.getElementById("navbar").style.top = "0";
-//   } else {
-//     document.getElementById("navbar").style.top = "-50px";
-//   }
-//   prevPos = currentPos;
-// }
-// --- HIDE MENU END --
+// -- HIDE ARROW MAIN --
 
-
+window.addEventListener("scroll", () => {
+  console.log(window.scrollY);
+  if (window.scrollY < 50) {
+    // gsap.set(".arrow-main", {opacity: 0});
+    gsap.to(".arrow-main", .3, {opacity: 0});
+  } else {
+    gsap.to(".arrow-main", .3, {opacity: 1});
+  }
+})
+// -- HIDE ARROW MAIN END --
 // NAME ANIMATION
 
 var tl = gsap.timeline({ paused: true});
@@ -31,7 +29,6 @@ const firstAnim = document.querySelector("#name.first-anim");
 const myName = document.getElementById("#name");
 var flag = true;
 function anim() {
-    
     if (!tl.isActive() && flag && !tlReverse.isActive()) {
         tl.play(0);
         flag = !flag;
