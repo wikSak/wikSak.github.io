@@ -20,6 +20,9 @@ body {
   justify-content: center;
 }
 
+.no-mobile{
+  display: none;
+}
 .arrow-main {
   width: 50px;
   height: 50px;
@@ -136,11 +139,12 @@ nav div:hover {
 }
 .menu-wrapper {
   width: 40vw;
+  max-width: 700px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 5px;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   box-sizing: border-box;
 }
@@ -163,7 +167,7 @@ nav div:hover {
 /* --- MAIN VIEW END --- */
 
 /* --- ABOUT SECTION NEW--- */
-#about-section {
+.about-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -292,19 +296,76 @@ nav div:hover {
   height: 500px;
 }
 
-#project-1 .project-view {
+#project-1 .project-view, #project-mobile-1 .project-view  {
   background: url('/assets/project-1.png') no-repeat;
   background-size: cover;
   background-position:  center;
 }
-#project-2 .project-view {
+#project-2 .project-view, #project-mobile-2 .project-view  {
   background: url('/assets/project-2.png') no-repeat;
   background-size: cover;
   background-position:  top;
 }
-#project-3 .project-view {
+#project-3 .project-view, #project-mobile-3 .project-view {
   background: url('/assets/project-3.png') no-repeat;
   background-size: cover;
   background-position:  top;
 }
 /* --- PROJECTS SECTION END --- */
+/* -- ABOUT MOBILE ---   */
+.about-section-mobile {
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+.about-wrapper.mobile {
+  flex-direction: column;
+  width: 80%;
+}
+.about-bottom-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+.about-section-mobile h1 {
+  margin-bottom: 15px;
+}
+.hex + .details {
+  padding-bottom: 20px;
+}
+
+/* -- ABOUT MOBILE END ---   */
+/* --- MEDIA QUERIES ---  */
+@media (max-width: 1200px) {
+  .main-view h1 {
+    font-size: 75px;
+  }
+  .no-desktop {
+    display: none;
+  }
+  .no-mobile {
+    display: initial;
+  }
+  .about-section-mobile {
+    display: flex;
+  }
+  .project {
+    flex-direction: column;
+    padding: 0 10vw;
+  }
+}
+@media (max-width: 900px) {
+  .main-view h1 {
+    font-size: 8vw;
+  }
+  .main-view h2 {
+    font-size: 3vw;
+  }
+  .menu-wrapper {
+    font-size: 20px;
+  }
+}
+/* --- MEDIA QUERIES END ---  */
