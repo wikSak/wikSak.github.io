@@ -120,44 +120,33 @@ tlArrow.to(".arrow", 0.5, { y: 10 }).to(".arrow", 0.5, { y: 0 });
       });
 
     // -- PROJECTS ANIMATIONS --
-    gsap.set("#projects-wrapper .project-desc", { x: 30 });
-    gsap.set("#projects-wrapper .project-view", { x: -30 });
 
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: "#project-1",
-          start: "center 80%",
-          end: "top bottom",
-          scrub: 2,
-          pin: true,
-        },
-      })
-      .from("#project-1 .project-desc", { x: -20 }, "frame-1")
-      .from("#project-1 .project-view", { x: 20 }, "frame-1");
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: "#project-2",
-          start: "center 80%",
-          end: "top bottom",
-          scrub: 2,
-          pin: true,
-        },
-      })
-      .from("#project-2 .project-desc", { x: -20 }, "frame-1")
-      .from("#project-2 .project-view", { x: 20 }, "frame-1");
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: "#project-3",
-          start: "center 80%",
-          end: "top bottom",
-          scrub: 2,
-          pin: true,
-        },
-      })
-      .from("#project-3 .project-desc", { x: -20 }, "frame-1")
-      .from("#project-3 .project-view", { x: 20 }, "frame-1");
+    gsap.utils.toArray(".no-desktop .project .project-desc").forEach(desc => {
 
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: desc,
+          toggleActions: "restart none none reverse",
+          start: "top 80%"
+        }
+      });
+    
+      tl
+      .to(desc, { x: 30 });
+   
+    });
+    gsap.utils.toArray(".no-desktop .project .project-view").forEach(picture => {
+
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: picture,
+          toggleActions: "restart none none reverse",
+          start: "top 80%"
+        }
+      });
+    
+      tl
+      .to(picture, { x: -30 });
+    });
+   
 // -- PROJECTS ANIMATIONS END --

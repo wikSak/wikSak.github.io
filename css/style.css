@@ -173,6 +173,7 @@ nav div:hover {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  font-size: 17px;
 }
 #about-section .about-left-wrapper .headline {
   margin-bottom: 20px;
@@ -293,13 +294,13 @@ nav div:hover {
 .project-view {
   background-color: #ccc;
   width: 600px;
-  height: 500px;
+  height: 450px;
 }
 
 #project-1 .project-view, #project-mobile-1 .project-view  {
   background: url('/assets/project-1.png') no-repeat;
   background-size: cover;
-  background-position:  center;
+  background-position:  top;
 }
 #project-2 .project-view, #project-mobile-2 .project-view  {
   background: url('/assets/project-2.png') no-repeat;
@@ -311,12 +312,18 @@ nav div:hover {
   background-size: cover;
   background-position:  top;
 }
+#project-4 .project-view, #project-mobile-4 .project-view {
+  background: url('/assets/project-4.png') no-repeat;
+  background-size: cover;
+  background-position:  top;
+}
 /* --- PROJECTS SECTION END --- */
 /* -- ABOUT MOBILE ---   */
 .about-section-mobile {
   width: 100vw;
   justify-content: center;
   align-items: center;
+  font-size: 17px;
 }
 .about-wrapper.mobile {
   flex-direction: column;
@@ -356,6 +363,23 @@ nav div:hover {
     flex-direction: column;
     padding: 0 10vw;
   }
+  .project-view {
+    width: 70%;
+    height: 300px;
+  }
+  .project-desc {
+    height: fit-content;
+    width: 70%;
+  }
+  .project-desc p{
+    padding-bottom: 20px;
+  }
+  .project-desc a {
+    position: initial;
+  }
+   #projects-wrapper-mobile .headline h1 {
+     margin-bottom: 15px;
+   }
 }
 @media (max-width: 900px) {
   .main-view h1 {
