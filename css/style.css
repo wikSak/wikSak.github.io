@@ -317,6 +317,11 @@ nav div:hover {
   background-size: cover;
   background-position:  top;
 }
+#project-5 .project-view, #project-mobile-5 .project-view {
+  background: url('/assets/project-5.png') no-repeat;
+  background-size: cover;
+  background-position:  top;
+}
 /* --- PROJECTS SECTION END --- */
 /* -- ABOUT MOBILE ---   */
 .about-section-mobile {
