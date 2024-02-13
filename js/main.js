@@ -62,9 +62,20 @@ function scrollToAbout() {
   }
 }
 function scrollToProjects() {
-  gsap.to(window, 0.5, { scrollTo: "#projects-wrapper" });
+  let windowSize =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+
+  if (windowSize > 1200) {
+    gsap.to(window, 0.5, { scrollTo: "#projects-wrapper" });
+  } else {
+    gsap.to(window, 0.5, { scrollTo: "#projects-wrapper-mobile" });
+  }
+
 }
 function scrollToMain() {
+  
   gsap.to(window, 0.5, { scrollTo: "#main-view" });
 }
 // --- ARROW SCROLL TO SELECTED SECTION END ---
