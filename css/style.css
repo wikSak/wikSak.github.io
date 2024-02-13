@@ -97,12 +97,14 @@ nav div:hover {
   font-size: 19px;
   text-align: center;
   line-height: 20px;
+  padding-right: 12px;
 }
 .icons-wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+
 }
 .icons-wrapper a {
   color: #414141;
@@ -391,10 +393,30 @@ nav div:hover {
     font-size: 8vw;
   }
   .main-view h2 {
-    font-size: 3vw;
+    font-size: 4.5vw;
+    line-height: 60px;
   }
   .menu-wrapper {
     font-size: 20px;
+    width: 70vw;
+  }
+  .name {
+    height: 10vw;
+  }
+  .side-wrapper p {
+    font-weight: 600;
+    font-size: 19px;
+    text-align: center;
+    line-height: 20px;
+    padding-right: 9px;
+  }
+
+  .side-wrapper #navbar {
+    display: none;
+  }
+
+  .project {
+    padding: 0;
   }
 }
 /* --- MEDIA QUERIES END ---  */
